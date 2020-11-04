@@ -1,70 +1,36 @@
 ---
 ---
 
-@string{aps = {American Physical Society,}}
-
-@book{einstein1956investigations,
-  title={Investigations on the Theory of the Brownian Movement},
-  author={Einstein, Albert},
-  year={1956},
-  publisher={Courier Corporation,}
+@article{ssd,
+abbr = {VLDB},
+author = {Kakaraparthy, Aarati and Patel, Jignesh M. and Park, Kwanghyun and Kroth, Brian P.},
+title = {Optimizing Databases by Learning Hidden Parameters of Solid State Drives},
+year = {2019},
+issue_date = {December 2019},
+publisher = {VLDB Endowment},
+volume = {13},
+number = {4},
+issn = {2150-8097},
+url = {https://doi.org/10.14778/3372716.3372724},
+doi = {10.14778/3372716.3372724},
+abstract = {Solid State Drives (SSDs) are complex devices with varying internal implementations, resulting in subtle differences in behavior between devices. In this paper, we demonstrate how a database engine can be optimized for a particular device by learning its hidden parameters. This can not only improve an application's performance, but also potentially increase the lifetime of the SSD. Our approach for optimizing a database for a given SSD consists of three steps: learning the hidden parameters of the device, proposing rules to analyze the I/O behavior of the database, and optimizing the database by eliminating violations of these rules.We obtain two different characteristics of an SSD, namely the request size profile and the location profile, from which we learn multiple internal parameters. Based on these parameters, we propose rules to analyze the I/O behavior of a database engine. Using these rules, we uncover sub-optimal I/O patterns in SQLite3 and MariaDB when running on our experimental SSDs. Finally, we present three techniques to optimize these database engines: (1) use-hot-locations on SSD-S, which improves the SELECT operation throughput of SQLite3 and MariaDB by 29% and 27% respectively; it also improves the performance of YCSB on MariaDB by 1%-22% depending on the workload mix, (2) write-aligned-stripes on SSD-T, reduces the wear-out caused by SQLite3 write-ahead log (WAL) file by 3.1%, and (3) contain-write-in-flash-page on SSD-T, which reduces the wear-out caused by the MariaDB binary log file by 6.7%.},
+journal = {Proc. VLDB Endow.},
+month = dec,
+pages = {519–532},
+numpages = {14}
 }
 
-@article{einstein1950meaning,
-  abbr={AJP},
-  title={The meaning of relativity},
-  author={Einstein, Albert and Taub, AH},
-  journal={American Journal of Physics,},
-  volume={18},
-  number={6},
-  pages={403--404},
-  year={1950},
-  publisher={American Association of Physics Teachers,}
-}
-
-@article{PhysRev.47.777,
-  abbr={PhysRev},
-  title={Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?},
-  author={Einstein, A. and Podolsky, B. and Rosen, N.},
-  abstract={In a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete.},
-  journal={Phys. Rev.,},
-  volume={47},
-  issue={10},
-  pages={777--780},
-  numpages={0},
-  year={1935},
-  month={May},
-  publisher=aps,
-  doi={10.1103/PhysRev.47.777},
-  url={http://link.aps.org/doi/10.1103/PhysRev.47.777},
-  html={https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777},
-  pdf={example_pdf.pdf},
-  selected={true}
-}
-
-@article{einstein1905molekularkinetischen,
-  title={{\"U}ber die von der molekularkinetischen Theorie der W{\"a}rme geforderte Bewegung von in ruhenden Fl{\"u}ssigkeiten suspendierten Teilchen},
-  author={Einstein, A.},
-  journal={Annalen der physik,},
-  volume={322},
-  number={8},
-  pages={549--560},
-  year={1905},
-  publisher={Wiley Online Library}
-}
-
-@article{einstein1905movement,
-  abbr={Ann. Phys.},
-  title={Un the movement of small particles suspended in statiunary liquids required by the molecular-kinetic theory 0f heat},
-  author={Einstein, A.},
-  journal={Ann. Phys.,},
-  volume={17},
-  pages={549--560},
-  year={1905}
-}
-
-@article{einstein1905electrodynamics,
-  title={On the electrodynamics of moving bodies},
-  author={Einstein, A.},
-  year={1905}
+@inproceedings{oneaccess,
+abbr = {HotCloud},
+author = {Kakaraparthy, Aarati and Venkatesh, Abhay and Phanishayee, Amar and Venkataraman, Shivaram},
+title = {The Case for Unifying Data Loading in Machine Learning Clusters},
+year = {2019},
+publisher = {USENIX Association},
+address = {USA},
+abstract = {Training machine learning models involves iteratively fetching and pre-processing batches of data. Conventionally, popular ML frameworks implement data loading within a job and focus on improving the performance of a single job. However, such an approach is inefficient in shared clusters where multiple training jobs are likely to be accessing the same data and duplicating operations. To illustrate this, we present a case study which reveals that for hyper-parameter tuning experiments, we can reduce up to 89% I/O and 97% pre-processing redundancy.Based on this observation, we make the case for unifying data loading in machine learning clusters by bringing the isolated data loading systems together into a single system. Such a system architecture can remove the aforementioned redundancies that arise due to the isolation of data loading in each job. We introduce OneAccess, a unified data access layer and present a prototype implementation that shows a 47.3% improvement in I/O cost when sharing data across jobs. Finally we discuss open research challenges in designing and developing a unified data loading layer that can run across frameworks on shared multi-tenant clusters, including how to handle distributed data access, support diverse sampling schemes, and exploit new storage media.},
+booktitle = {Proceedings of the 11th USENIX Conference on Hot Topics in Cloud Computing},
+pages = {12},
+numpages = {1},
+location = {Renton, WA, USA},
+series = {HotCloud'19}
 }

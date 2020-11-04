@@ -52,7 +52,7 @@ a, table.table a {
 
 @media (min-width: 576px) {
   .profile {
-    width: 30%;
+    width: 40%;
     .address {
       p { display: block; }
     }
@@ -71,6 +71,15 @@ a, table.table a {
   }
 }
 
+// Clearfix
+.clearfix {
+  margin-top: 40px;
+}
+
+// news
+.news {
+  margin-top: 30px;
+}
 
 // Navbar customization
 
