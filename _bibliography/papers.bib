@@ -1,6 +1,38 @@
 ---
 ---
 
+@inproceedings{fpga,
+abbr = {ICDE},
+author = {Eryilmaz, Zubeyr, M. and Kakaraparthy, Aarati and Patel, Jignesh M. and Sen, Rathijit and Park, Kwanghyun},
+title = {FPGA for Aggregate Processing: The Good, The Bad, and The Ugly},
+year = {2021},
+publisher = {IEEE},
+url = {https://aarati-k.github.io/assets/pdf/fpga.pdf},
+abstract = {In this paper, we focus on current CPU-FPGA
+architectures and study their usability for database management
+systems. To focus our scope, we choose aggregation as the
+query processing primitive for this investigation. We implement
+a fully pipelined stall-free module that performs aggregation
+on the FPGA, and also describe a performance model that
+predicts the runtime of this module with 99% accuracy. We
+study the performance of this module on two different CPU-FPGA architectures, namely remote-main-memory and bump-inthe-wire. Compared to an implementation of aggregation on CPU,
+we find that the former is 1.7× slower whereas the latter is 2.2×
+faster. This significant performance gap suggests two important
+architectural considerations when designing CPU-FPGA systems,
+namely the bandwidth ceiling and the resource ceiling, while also
+highlighting issues of switching times and programmer efficiency.
+We consider broader hardware trends to study the suitability
+of the two FPGA architectures for accelerating the aggregation
+operation, and find that the performance gap is likely to stay in
+the coming future. Based on these observations, we discuss some
+challenges and opportunities for CPU-FPGA architectures.},
+booktitle = {International Conference on Data Engineering (ICDE)},
+pages = {12},
+numpages = {1},
+location = {Chania, Greece},
+series = {ICDE'21}
+}
+
 @article{ssd,
 abbr = {VLDB},
 author = {Kakaraparthy, Aarati and Patel, Jignesh M. and Park, Kwanghyun and Kroth, Brian P.},
